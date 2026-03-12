@@ -36,13 +36,13 @@ Output is JSON written to stdout. Errors and status messages go to stderr.
 Output is NDJSON (one JSON object per line):
 
 ```
-{"id":"6603025-0","idType":"NIT","name":"SCHNEIDER MARTINEZ , CHRISTOPHER PAUL","dpi":"1704 99634 0101","matriculas":[{"id":"01S300102","properties":[{"direccion":"LOTE 9, 20 AVE Y (GUATEMALA / GUATEMALA)","fechaDeclaracion":"09/07/2012","extensionMts2":317.15,"fechaOperacion":"01/09/2012","finca":"1299","folio":23,"libro":92853,"valorFincaQuetzales":80000,"procedencia":"01S035111","valorTerreno":0,"valorConstruccion":0,"areaConstruccionMts2":0,"valorCultivos":0}]}],"totalExtensionMts2":981.45,"totalValueQuetzales":475000}
+{"id":"1234567-8","idType":"NIT","name":"GARCIA LOPEZ , JUAN CARLOS","dpi":"2581 47936 0201","matriculas":[{"id":"01S400203","properties":[{"direccion":"LOTE 3, 12 AVE Y (GUATEMALA / GUATEMALA)","fechaDeclaracion":"09/07/2012","extensionMts2":317.15,"fechaOperacion":"01/09/2012","finca":"2847","folio":56,"libro":71249,"valorFincaQuetzales":80000,"procedencia":"01S035111","valorTerreno":0,"valorConstruccion":0,"areaConstruccionMts2":0,"valorCultivos":0}]}],"totalExtensionMts2":981.45,"totalValueQuetzales":475000}
 ```
 
 Pipe through `jq` for readable output:
 
 ```bash
-node scraper.js 6603025-0 | jq .
+node scraper.js 1234567-8 | jq .
 ```
 
 ### Output fields
