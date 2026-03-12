@@ -448,7 +448,7 @@ async function scrape(taxId) {
           properties: [],
           message: message,
         };
-        process.stdout.write(JSON.stringify(output, null, 2) + '\n');
+        process.stdout.write(JSON.stringify(output) + '\n');
         return;
       }
     }
@@ -523,7 +523,7 @@ async function scrape(taxId) {
     output.totalExtensionMts2 = report.totalExtensionMts2;
     output.totalValueQuetzales = report.totalValueQuetzales;
 
-    process.stdout.write(JSON.stringify(output, null, 2) + '\n');
+    process.stdout.write(JSON.stringify(output) + '\n');
 
   } finally {
     await browser.close();
