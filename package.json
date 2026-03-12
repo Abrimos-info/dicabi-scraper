@@ -1,0 +1,20 @@
+{
+  "name": "dicabi-scraper",
+  "version": "1.0.0",
+  "main": "scraper.js",
+  "bin": {
+    "dicabi-scraper": "scraper.js"
+  },
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "keywords": ["guatemala", "dicabi", "property", "scraper", "nit", "catastro"],
+  "author": "",
+  "license": "ISC",
+  "description": "CLI tool to extract property registration data from Guatemala's DICABI website",
+  "dependencies": {
+    "puppeteer": "^24.39.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
