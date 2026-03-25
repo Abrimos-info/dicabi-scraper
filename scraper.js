@@ -134,7 +134,7 @@ function parseReport(rawText, queriedNit) {
   for (let i = 0; i < lines.length; i++) {
     if (lines[i] === 'MATRICULA:' && i + 1 < lines.length) {
       const id = lines[i + 1];
-      if (id.match(/^\d{2}[A-Z]\d+$/)) {
+      if (id.match(/^\d{2}[A-Z ]\d+$/)) {
         // Find end of section
         let end = lines.length;
         for (let j = i + 2; j < lines.length; j++) {
@@ -299,7 +299,7 @@ function parseReport(rawText, queriedNit) {
       // de (skip)
       if (vi < vals.length) { vi++; }
       // procedencia
-      if (vi < vals.length && vals[vi].match(/^\d{2}[A-Z]\d{4,6}$/)) { property.procedencia = vals[vi]; vi++; }
+      if (vi < vals.length && vals[vi].match(/^\d{2}[A-Z ]\d{4,6}$/)) { property.procedencia = vals[vi]; vi++; }
       // ordinal (skip)
       if (vi < vals.length) { vi++; }
       // valorTerreno
